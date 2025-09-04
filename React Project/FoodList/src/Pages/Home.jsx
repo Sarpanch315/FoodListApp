@@ -22,7 +22,7 @@ export default function Home () {
           try {
             // Fetching data from the API
             const response = await fetch(
-              'https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2124&lng=78.1772&page_type=DESKTOP_WEB_LISTING'
+              'https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2124&lng=78.1772&page_type=DESKTOP_WEB_LISTING'
             );
     
             // Check if the response is OK
