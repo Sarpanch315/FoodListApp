@@ -33,7 +33,7 @@ const RestaurantDetails = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.2124&lng=78.1772&restaurantId=${id}`
+          `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.2124&lng=78.1772&restaurantId=${id}`
         );
 
         if (!response.ok) {
