@@ -118,7 +118,7 @@ export default function Home () {
                     ))}
                 </div>
             ):(
-                <p className="text-gray-500 text-center mt-4">No ImageGrid Cards Found</p>
+                <div className="text-gray-500 text-center mt-4">No ImageGrid Cards Found</div>
             )}
         </div>
 
