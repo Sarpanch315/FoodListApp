@@ -32,9 +32,7 @@ const RestaurantDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.2124&lng=78.1772&restaurantId=${id}`
-        );
+        const response = await fetch(`/api/menu?id=${id}`);  // Using serverless endpoint
 
         if (!response.ok) {
           throw new Error("Failed to fetch data");

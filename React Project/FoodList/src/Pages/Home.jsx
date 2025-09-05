@@ -21,15 +21,8 @@ export default function Home () {
         const fetchData = async () => {
           try {
             // Fetching data from the API
-            const response = await fetch(
-              'https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.2124&lng=78.1772&page_type=DESKTOP_WEB_LISTING'
-            );
-    
-            // Check if the response is OK
-            if (!response.ok) {
-              throw new Error('Failed to fetch data');
-            }
-    
+            const response = await fetch("/api/restaurants");    
+            
             const result = await response.json();
     
             // Dispatch only the 'cards' array to Redux
